@@ -73,6 +73,7 @@
         _author = [aDecoder decodeObjectForKey:@"author"];
         _guid = [aDecoder decodeObjectForKey:@"guid"];
         _duration = [aDecoder decodeObjectForKey:@"duration"];
+        _imageUrl = [aDecoder decodeObjectForKey:@"imageUrl"];
     }
     return self;
 }
@@ -90,6 +91,7 @@
     [aCoder encodeObject:self.author forKey:@"author"];
     [aCoder encodeObject:self.guid forKey:@"guid"];
     [aCoder encodeObject:self.duration forKey:@"duration"];
+    [aCoder encodeObject:self.imageUrl forKey:@"imageUrl"];
 }
 
 #pragma mark -

@@ -111,6 +111,9 @@
             [currentItem setGuid:tmpString];
         } else if ([elementName isEqualToString:@"itunes:duration"]) {
             [currentItem setDuration:tmpString];
+        } else if ([elementName isEqualToString:@"itunes:image"]) {
+            NSString *url = [tmpAttrDict objectForKey:@"href"];
+            [currentItem setImageUrl:[NSURL URLWithString:url]];
         }
         
         // sometimes the URL is inside enclosure element, not in link. Reference: http://www.w3schools.com/rss/rss_tag_enclosure.asp
